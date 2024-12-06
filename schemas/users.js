@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-import {Roles} from '../constants.js';
+import { Roles } from '../constants.js';
 
 const usersSchema = new mongoose.Schema({
   firstName: {
@@ -16,11 +16,11 @@ const usersSchema = new mongoose.Schema({
     min: [18, "Users must be adults"],
     required: false
   },
-  email: {   
+  email: {
     type: String,
     required: true,
     unique: true,
-    trim: true,// 'asd@o2.pl ' -> 'asd@o2.pl'
+    trim: true,
     lowercase: true
   },
   password: {
